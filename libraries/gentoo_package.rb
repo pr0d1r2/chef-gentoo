@@ -8,7 +8,16 @@ class Chef
     class Package
       class Gentoo < Chef::Provider::Package::Portage
         include Chef::Mixin::ShellOut
+        def install_package(name, version)
+          pkg = "=#{name}-#{version}"
 
+          if(version =~ /^\~(.+)/)
+            # If we start with a tilde
+            pkg = "~#{name}-#{$1}"
+          end
+
+          shell_out!( "emerge -g --color n --nospinner --quiet#{expand_options(@new_resource.options)} #{pkg}", :timeout => 3600 )
+        end
         def parse_emerge(package, txt)
           availables = {}
           category, package_without_category = %r{^#{PACKAGE_NAME_PATTERN}$}.match(@new_resource.package_name)[1,2]
