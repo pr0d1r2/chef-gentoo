@@ -21,7 +21,7 @@ default[:gentoo][:emerge_options] = ["--verbose"] # + ["--jobs=3", "--load-avera
 default[:gentoo][:overlay_directories] = []
 default[:gentoo][:collision_ignores] = []
 default[:gentoo][:accept_licenses] = []
-default[:gentoo][:ruby_targets] = ["ruby18"]
+default[:gentoo][:ruby_targets] = ["ruby19"]
 default[:gentoo][:python_targets] = ["python2_7"]
 default[:gentoo][:use_expands] = {}
 default[:gentoo][:elog_mailuri] = "" # "foo@example.com smtp.example.com"
