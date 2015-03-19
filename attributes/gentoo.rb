@@ -10,7 +10,7 @@ default[:gentoo][:use_flags] = [
   "glibc-omitfp", "gnutls", "iconv", "idn", "mmx", "modules", "mudflap",
   "multilib", "ncurses", "nls", "nptl", "nptlonly", "openmp", "pam",
   "pcre", "posix", "readline", "ruby", "sse", "sse2", "ssl", "sysfs",
-  "sysvipc", "threads", "threadsafe", "unicode", "urandom", "xml", "zlib"
+  "sysvipc", "threads", "threadsafe", "unicode", "urandom", "xml", "zlib", "curl_ssl_openssl"
 ]
 
 default[:gentoo][:cflags] = "-march=native -O0 -pipe" # -O3
