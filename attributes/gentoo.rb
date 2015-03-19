@@ -13,7 +13,7 @@ default[:gentoo][:use_flags] = [
   "sysvipc", "threads", "threadsafe", "unicode", "urandom", "xml", "zlib"
 ]
 
-default[:gentoo][:cflags] = "-march=native -O2 -pipe"
+default[:gentoo][:cflags] = "-march=native -O0 -pipe" # -O3
 default[:gentoo][:makeopts] = "-j#{node[:cpu][:total].to_i+1}"
 
 default[:gentoo][:portage_features] = %w(sandbox sfperms strict buildpkg parallel-fetch)
