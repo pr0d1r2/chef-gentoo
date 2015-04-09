@@ -7,7 +7,7 @@ attribute :name,
 #  :regex          => [
 #    /\w+-\w+\/(\w|-)+/,
 #    /(<|>)?(=)?\w+-\w+\/(\w|-|\.)+/
-  ]
+#  ]
 
 attribute :type,
   :kind_of => String,
