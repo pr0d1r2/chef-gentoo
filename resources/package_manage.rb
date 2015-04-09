@@ -4,9 +4,9 @@ default_action :create
 attribute :name,
   :name_attribute => true,
   :kind_of        => String,
-  :regex          => [
-    /\w+-\w+\/(\w|-)+/,
-    /(<|>)?(=)?\w+-\w+\/(\w|-|\.)+/
+#  :regex          => [
+#    /\w+-\w+\/(\w|-)+/,
+#    /(<|>)?(=)?\w+-\w+\/(\w|-|\.)+/
   ]
 
 attribute :type,
