@@ -3,7 +3,7 @@ default_action :create
 
 attribute :name,
   :name_attribute => true,
-  :kind_of        => String,
+  :kind_of        => String#,
 #  :regex          => [
 #    /\w+-\w+\/(\w|-)+/,
 #    /(<|>)?(=)?\w+-\w+\/(\w|-|\.)+/
