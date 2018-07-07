@@ -50,4 +50,4 @@ class Chef
   end
 end
 
-Chef::Platform.set :platform => :gentoo, :resource => :package, :provider => Chef::Provider::Package::Gentoo
+Chef::Provider::Package::Gentoo.provides :package, platform: :gentoo
